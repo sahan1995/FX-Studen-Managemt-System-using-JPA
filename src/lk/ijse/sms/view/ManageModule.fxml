@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.ValidationFacade?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="692.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sms.controller.ManageModuleController">
+   <children>
+      <ImageView fitHeight="533.0" fitWidth="719.0" layoutX="-2.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/desktop-3246124_1280.jpg" />
+         </image>
+      </ImageView>
+      <ValidationFacade layoutX="250.0" layoutY="238.0" />
+      <ButtonBar layoutX="230.0" layoutY="171.0" prefHeight="40.0" prefWidth="200.0" />
+      <Label layoutX="250.0" layoutY="32.0" text="Manage Modules" textFill="#160101" underline="true">
+         <font>
+            <Font name="AR JULIAN" size="26.0" />
+         </font>
+      </Label>
+      <Pane layoutX="15.0" layoutY="84.0" opacity="0.95" prefHeight="150.0" prefWidth="686.0" style="-fx-background-color: white;">
+         <children>
+            <JFXButton layoutX="539.0" layoutY="96.0" onAction="#btnRemoveOnAction" style="-fx-background-color: #D9534F;" text="Remove">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="449.0" layoutY="96.0" onAction="#btnUpdateOnAction" style="-fx-background-color: #F0AD4E;" text="Update">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXButton layoutX="364.0" layoutY="96.0" onAction="#btnSaveOnAction" prefHeight="28.0" prefWidth="52.0" style="-fx-background-color: #5BC0DE;" text="Save">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtModuleName" labelFloat="true" layoutX="38.0" layoutY="96.0" prefHeight="25.0" prefWidth="278.0" promptText="Module Name">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtModuleCode" focusTraversable="false" labelFloat="true" layoutX="31.0" layoutY="28.0" onKeyPressed="#txtModuleCodeKeyPresses" prefHeight="25.0" prefWidth="278.0" promptText="Module Code">
+               <font>
+                  <Font name="Calibri Bold" size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="560.0" layoutY="12.0" onAction="#btnAddnewOnAction" prefHeight="30.0" prefWidth="113.0" style="-fx-background-color: #5CB85C;" text="Add New">
+               <font>
+                  <Font name="Impact" size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="tblModules" layoutX="23.0" layoutY="272.0" onMouseClicked="#tblMouseClicked" prefHeight="375.0" prefWidth="672.0">
+        <columns>
+          <TableColumn prefWidth="171.20001602172852" text="Module Code" />
+          <TableColumn prefWidth="499.1999969482422" text="Module Name" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgHome" fitHeight="39.0" fitWidth="41.0" layoutX="16.0" layoutY="16.0" onMouseClicked="#imgHomeClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Home_48px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

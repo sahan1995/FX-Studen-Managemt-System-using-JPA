@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-28T11:56:47 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BatchStudents" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ab273d3a-6816-4a30-9a0b-3d1ffefb499c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Student Management System"/>
+	<parameter name="batchno" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT s.* FROM student s INNER JOIN student_batch sb ON sb.sid=s.sid WHERE sb.batch_no= $P{batchno} ]]>
+	</queryString>
+	<field name="sid" class="java.lang.String"/>
+	<field name="fname" class="java.lang.String"/>
+	<field name="lname" class="java.lang.String"/>
+	<field name="nic" class="java.lang.String"/>
+	<field name="contact" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="27" width="230" height="30" uuid="1ebc505f-1560-43e3-802f-a6d3e81a1c6b"/>
+				<textElement>
+					<font fontName="Cooper Black" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Batch Students]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-24" y="0" width="95" height="30" forecolor="#176FAD" uuid="79de9d4f-d89e-4092-9296-8484f9feaa23"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="0" width="92" height="30" forecolor="#176FAD" uuid="2297d98b-90c3-483d-bb9c-fcc00b7ebf4c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[First Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="0" width="92" height="30" forecolor="#176FAD" uuid="36f09646-2794-49fd-8c49-a91271de35b1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Last Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="246" y="0" width="92" height="30" forecolor="#176FAD" uuid="9ee1e688-4830-44df-bd20-2d0cbe2e9cbb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIC No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="338" y="0" width="92" height="30" forecolor="#176FAD" uuid="9a6f3095-5077-4ac2-88b0-e3de8b195d95"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="432" y="0" width="92" height="30" forecolor="#176FAD" uuid="cbb6ec60-d348-4969-a7b2-bc838ef235d9"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement x="-11" y="0" width="95" height="30" uuid="561ea7f3-9b51-49cb-9074-64e02563666e"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="84" y="0" width="92" height="30" uuid="f06bd916-ec74-40ad-abeb-19a216623e83"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="176" y="0" width="92" height="30" uuid="0ab8c22e-0b99-4d59-ba66-f4708c7a6477"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="268" y="0" width="92" height="30" uuid="c57f0184-3723-4f04-826c-d6e52a69b481"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="92" height="30" uuid="78c17da8-6762-42d4-95d6-2e4158021a99"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{contact}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="452" y="0" width="92" height="30" uuid="6ee5de78-df6b-45d4-a216-9b6fbf815f8b"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

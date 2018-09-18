@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="535.0" prefWidth="807.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sms.controller.ReportDashBoardController">
+   <children>
+      <ImageView fx:id="imgStuReport" fitHeight="107.0" fitWidth="116.0" layoutX="47.0" layoutY="199.0" onMouseClicked="#imgClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Student_Male_96px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgResults" fitHeight="107.0" fitWidth="116.0" layoutX="634.0" layoutY="199.0" onMouseClicked="#imgClicked" onMouseEntered="#imgMouseEnterd" onMouseExited="#imgMouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Exam_96px.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBatch" fitHeight="107.0" fitWidth="116.0" layoutX="350.0" layoutY="199.0" onDragDetected="#s" onMouseClicked="#imgClicked" onMouseEntered="#imgMouseEnterd" onMouseExited="#imgMouseExit" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Batch_Assign_100px.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblMsg" layoutX="327.0" layoutY="376.0" prefHeight="39.0" prefWidth="343.0" text="Reports DashBoard" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imgHome" fitHeight="39.0" fitWidth="41.0" layoutX="718.0" layoutY="30.0" onMouseClicked="#imgHomeClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Home_48px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

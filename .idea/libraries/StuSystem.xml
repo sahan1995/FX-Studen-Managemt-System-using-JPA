@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="StuSystem">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/jfoenix.jar!/" />
+      <root url="jar://$PROJECT_DIR$/scenicView.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

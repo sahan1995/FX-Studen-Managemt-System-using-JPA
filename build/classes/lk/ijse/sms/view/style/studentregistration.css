@@ -1,0 +1,10 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btnReg:hover{
+    -fx-background-color:#64EE64;
+}

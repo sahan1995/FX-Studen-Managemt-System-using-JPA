@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-28T12:33:55 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BatchAttendenceSheet" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="87e848be-d04b-4838-9dc1-42d7e54950e4">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Student Management System"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="batchno" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT s.sid,s.fname,s.lname FROM student s INNER JOIN student_batch sb ON sb.sid=s.sid WHERE sb.batch_no=  $P{batchno} ]]>
+	</queryString>
+	<field name="sid" class="java.lang.String"/>
+	<field name="fname" class="java.lang.String"/>
+	<field name="lname" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="27" width="230" height="30" uuid="491d37ad-1dcb-4068-830f-27e81825b39c"/>
+				<textElement>
+					<font fontName="Cooper Black" size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Attendence Sheet]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="58" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="-11" y="10" width="160" height="30" uuid="e709c3e4-d1b0-42c5-a5b5-9f02b2168d6f"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" forecolor="#136DEB" uuid="a0f55cc1-6d20-46c7-9fd3-42b25505ae5f"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="90" y="0" width="160" height="30" forecolor="#136DEB" uuid="98918fbe-9bc8-4ccd-a48c-70d5cac4fd92"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Student Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" forecolor="#136DEB" uuid="372f857d-601e-48b0-93b4-19798d5f6245"/>
+				<textElement>
+					<font fontName="Calibri" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Signature]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="0" y="9" width="80" height="20" backcolor="rgba(55, 204, 250, 0.4392157)" uuid="5e400859-6f9a-4f62-9fea-332ad9ddd532"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="88" y="9" width="160" height="20" backcolor="rgba(55, 204, 250, 0.4392157)" uuid="236d1615-1a72-4e14-b940-08e1148147d3"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement isPrintRepeatedValues="false" mode="Transparent" x="142" y="9" width="125" height="20" backcolor="rgba(55, 204, 250, 0.4392157)" uuid="e1a5903c-2447-48c3-9d08-251b2481f93d"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lname}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="350" y="9" width="100" height="20" backcolor="rgba(55, 204, 250, 0.4392157)" uuid="22252dad-35d1-4121-9bfb-6756668c9c49"/>
+				<box>
+					<pen lineWidth="1.0" lineStyle="Solid"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

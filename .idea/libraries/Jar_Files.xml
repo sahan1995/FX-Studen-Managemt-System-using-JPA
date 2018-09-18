@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="Jar Files">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Jar Files/org.apache.commons.collections.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/jfreechart-1.0.13.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/jcommon-1.0.8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/itext-2.1.7-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/com.lowagie.text-2.1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/commons-beanutils-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/jasperreports-6.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/jasperreports-javaflow-6.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/org-apache-commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/jasperreports-fonts-6.4.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Jar Files/itextpdf-5.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

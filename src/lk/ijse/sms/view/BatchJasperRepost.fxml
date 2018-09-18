@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="250.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.sms.controller.BatchJasperRepostController">
+   <children>
+      <JFXComboBox fx:id="cmbBatch" labelFloat="true" layoutX="39.0" layoutY="100.0" prefHeight="26.0" prefWidth="226.0" promptText="Select Batch" />
+      <JFXButton layoutX="298.0" layoutY="100.0" onAction="#btnSreportOnAction" prefHeight="27.0" prefWidth="241.0" style="-fx-background-color: #81CF79;" text="Generate Student Report">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="565.0" layoutY="100.0" onAction="#btnAttendenceOnAction" prefHeight="27.0" prefWidth="226.0" style="-fx-background-color: #8564EF;" text="Generate  Attendence Sheet">
+         <font>
+            <Font name="Calibri Bold" size="17.0" />
+         </font>
+      </JFXButton>
+      <ImageView fx:id="imgHome" fitHeight="39.0" fitWidth="41.0" layoutX="723.0" layoutY="14.0" onMouseClicked="#imgHomeClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Home_48px_1.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgBack" fitHeight="39.0" fitWidth="41.0" layoutX="20.0" layoutY="21.0" onMouseClicked="#imgBackClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/icons8_Go_Back_48px_1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="StuSystem1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/dist/StuSystem.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
